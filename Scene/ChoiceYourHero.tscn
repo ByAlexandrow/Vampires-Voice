@@ -1,0 +1,398 @@
+[gd_scene load_steps=46 format=3 uid="uid://dus8w6vdplqk0"]
+
+[ext_resource type="Script" path="res://Godot files/ChoiceYourHero.gd" id="1_arvrf"]
+[ext_resource type="Texture2D" uid="uid://ddo4bw8mseup" path="res://Textures/BackgroundPanel.jpg" id="1_kr44v"]
+[ext_resource type="FontFile" uid="uid://drtdid6ufkp3x" path="res://Fonts/Caveat-SemiBold.ttf" id="2_7cl1j"]
+[ext_resource type="Texture2D" uid="uid://bp2lh3rt5xcre" path="res://Heroes/HeroFireWarrior/Fire_Warrior/Fire_Warrior-Sheet.png" id="4_qgdxx"]
+[ext_resource type="Texture2D" uid="uid://45eeo2ehtdfv" path="res://Heroes/HeroLightningWoman/Spearwoman-Sheet.png" id="5_6gvbc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3wpn"]
+texture = ExtResource("1_kr44v")
+modulate_color = Color(0.74902, 0.74902, 0.74902, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ime7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwwyu"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c3uy1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_68iwq"]
+bg_color = Color(0.470588, 0.105882, 0.0784314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_at35s"]
+bg_color = Color(0.470588, 0.105882, 0.0784314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ip4jp"]
+bg_color = Color(0.470588, 0.105882, 0.0784314, 1)
+border_color = Color(0.470588, 0.105882, 0.0784314, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+shadow_color = Color(0.470588, 0.105882, 0.0784314, 0.6)
+shadow_size = 10
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qgm4"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(0, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c58ph"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(128, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeyde"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(256, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1w3su"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(384, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2lno"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(512, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fewa2"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(640, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o27kv"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(768, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2xjp"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(896, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6oamv"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1024, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vepol"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1152, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odjxs"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1280, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e8prx"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1408, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_twxyb"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1536, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4445"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1664, 2530, 128, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gaqt1"]
+atlas = ExtResource("5_6gvbc")
+region = Rect2(1792, 2530, 128, 115)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dhuk6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qgm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c58ph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeyde")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1w3su")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2lno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fewa2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o27kv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2xjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6oamv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vepol")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odjxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e8prx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_twxyb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4445")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gaqt1")
+}],
+"loop": true,
+"name": &"HeroLightningWoman",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_awafp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ed4i8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ap4n"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(0, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ua3tv"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(144, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_car8u"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(288, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w7e2u"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(432, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_axjop"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(576, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agk37"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(720, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0vi2"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(864, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_taeni"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(1008, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7lfx"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(1152, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58mql"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(1296, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ph7us"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(1440, 1600, 144, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ys5m"]
+atlas = ExtResource("4_qgdxx")
+region = Rect2(1584, 1600, 144, 80)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iavfm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ap4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ua3tv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_car8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w7e2u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_axjop")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agk37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0vi2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_taeni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7lfx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58mql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ph7us")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ys5m")
+}],
+"loop": true,
+"name": &"HeroFireWarrior",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_smgkp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ay2ln"]
+
+[node name="ChoiceYourHero" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_arvrf")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_x3wpn")
+
+[node name="GameTitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_right = 277.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0.470588, 0.105882, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 45
+text = "VAMPIRE'S VOICE: THE STRUGGLE FOR LIFE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeByLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -26.0
+offset_right = 69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 20
+text = "Made ByAlexandrow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -87.0
+offset_right = 136.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.470588, 0.105882, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0ime7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mwwyu")
+text = "<<--"
+flat = true
+icon_alignment = 1
+
+[node name="RandomChoiceHeroButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.0
+offset_top = -130.0
+offset_right = 126.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_disabled_color = Color(0.470588, 0.105882, 0.0784314, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.783523, 0.783523, 0.783523, 1)
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c3uy1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_68iwq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_at35s")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ip4jp")
+text = "--RANDOM--"
+
+[node name="HeroLightningWoman" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(834, 203)
+scale = Vector2(5.71875, 6.49565)
+sprite_frames = SubResource("SpriteFrames_dhuk6")
+animation = &"HeroLightningWoman"
+
+[node name="ChoiceShine" type="Button" parent="."]
+layout_mode = 0
+offset_left = 866.0
+offset_top = 390.0
+offset_right = 1069.0
+offset_bottom = 452.0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.783523, 0.783523, 0.783523, 1)
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_awafp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ed4i8")
+text = "<--Shine"
+flat = true
+icon_alignment = 1
+
+[node name="HeroFireWarrior" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(441, 319)
+scale = Vector2(5.83333, 6.31875)
+sprite_frames = SubResource("SpriteFrames_iavfm")
+animation = &"HeroFireWarrior"
+
+[node name="ChoiceFlame" type="Button" parent="."]
+layout_mode = 2
+offset_left = 66.0
+offset_top = 285.064
+offset_right = 206.0
+offset_bottom = 347.064
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.783523, 0.783524, 0.783523, 1)
+theme_override_fonts/font = ExtResource("2_7cl1j")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_smgkp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ay2ln")
+button_mask = 0
+text = "Flame-->"
+flat = true
+icon_alignment = 1
+
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
+[connection signal="pressed" from="RandomChoiceHeroButton" to="." method="_on_random_choice_hero_button_pressed"]

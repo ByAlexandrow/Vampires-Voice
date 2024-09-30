@@ -1,0 +1,157 @@
+[gd_scene load_steps=17 format=3 uid="uid://kcd2oou6w4la"]
+
+[ext_resource type="Texture2D" uid="uid://ddo4bw8mseup" path="res://Textures/BackgroundPanel.jpg" id="1_27yhy"]
+[ext_resource type="Script" path="res://Godot files/GameSettings.gd" id="1_kmxq8"]
+[ext_resource type="FontFile" uid="uid://drtdid6ufkp3x" path="res://Fonts/Caveat-SemiBold.ttf" id="2_tnwb5"]
+[ext_resource type="Texture2D" uid="uid://bc4bjkdyp56e3" path="res://Heroes/Necromant/Necromancer_creativekind-Sheet.png" id="4_roj3h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lfnhj"]
+texture = ExtResource("1_27yhy")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipn3p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k2aiy"]
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rtw8w"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(0, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_la7r5"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(160, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jxrl"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(320, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4e46q"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(480, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_037d1"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(640, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ji0u"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(800, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8ey3"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(960, 0, 160, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4uhh"]
+atlas = ExtResource("4_roj3h")
+region = Rect2(1120, 0, 160, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_26u5h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rtw8w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_la7r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jxrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4e46q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_037d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ji0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n8ey3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4uhh")
+}],
+"loop": true,
+"name": &"Necromant",
+"speed": 5.0
+}]
+
+[node name="GameSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kmxq8")
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_lfnhj")
+
+[node name="GameTitleLabel" type="Label" parent="."]
+layout_mode = 1
+offset_right = 755.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0.470588, 0.105882, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_tnwb5")
+theme_override_font_sizes/font_size = 45
+text = "VAMPIRE'S VOICE: THE STRUGGLE FOR LIFE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MadeByLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -69.0
+offset_top = -26.0
+offset_right = 69.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_tnwb5")
+theme_override_font_sizes/font_size = 20
+text = "Made ByAlexandrow"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BackToMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -89.0
+offset_right = 131.0
+grow_vertical = 0
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.470588, 0.105882, 0.0784314, 1)
+theme_override_fonts/font = ExtResource("2_tnwb5")
+theme_override_font_sizes/font_size = 45
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ipn3p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k2aiy")
+text = "<<--"
+flat = true
+icon_alignment = 1
+
+[node name="Necromant" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(1020, 280)
+scale = Vector2(4.83125, 6.78125)
+sprite_frames = SubResource("SpriteFrames_26u5h")
+animation = &"Necromant"
+flip_h = true
+
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
