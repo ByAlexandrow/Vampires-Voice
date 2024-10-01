@@ -2,11 +2,15 @@ extends CharacterBody2D
 
 @onready var main_hero = $MainHero
 
+@onready var flame = $FlameAnimations
+
 var min_speed = 150
 var max_speed = 400
 
+
 func _ready() -> void:
 	load_hero_selection()
+
 
 func _physics_process(delta: float) -> void:
 	var input_vector = Vector2.ZERO
@@ -19,16 +23,17 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 
+
 func load_hero_selection():
 	var config = ConfigFile.new()
 	var err = config.load("user://hero_selection.cfg")
-	
 	if err == OK:
 		var selected_hero = config.get_value("HeroSelection", "SelectedHero", "Unknown")
 		print("Selected hero: ", selected_hero)
 		load_hero_sprite(selected_hero)
 	else:
 		print("No hero selected")
+
 
 func load_hero_sprite(hero_name):
 	var sprite_path = "res://Heroes/" + hero_name + ".png"

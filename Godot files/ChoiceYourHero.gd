@@ -1,14 +1,14 @@
 extends Control
 
-@onready var fire_warrior_anim = $HeroFireWarrior
-@onready var lightning_woman_anim = $HeroLightningWoman
+@onready var flame_hero = $HeroFireWarrior
+@onready var shine_hero = $HeroLightningWoman
 
 var selected_hero = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	fire_warrior_anim.play("HeroFireWarrior")
-	lightning_woman_anim.play("HeroLightningWoman")
+	flame_hero.play("HeroFireWarrior")
+	shine_hero.play("HeroLightningWoman")
 	$ChoiceFlame.connect("pressed", Callable(self, "_on_hero_button_pressed").bind("Flame"))
 	$ChoiceShine.connect("pressed", Callable(self, "_on_hero_button_pressed").bind("Shine"))
 	$RandomChoiceHeroButton.connect("pressed", Callable(self, "_on_random_choice_hero_button_pressed")) # Replace with function body.
@@ -22,7 +22,12 @@ func _on_hero_button_pressed(hero_name):
 
 func save_hero_selection():
 	var config = ConfigFile.new()
-	config.set_value("HeroSelection", "SelectedHero", selected_hero)
+	var err = config.load("user://hero_selection.cfg")
+	if err != OK:
+		err = config.save("user://hero_selection.cfg")
+	if err == OK:
+		config.set_value("HeroSelection", "SelectedHero", selected_hero)
+		config.save("user://hero_selection.cfg")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,4 +43,4 @@ func _on_random_choice_hero_button_pressed() -> void:
 	var random_heroes = ["Flame", "Shine"]
 	selected_hero = random_heroes[randi() % random_heroes.size()]
 	save_hero_selection()
-	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn")# Replace with function body.
+	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn")
