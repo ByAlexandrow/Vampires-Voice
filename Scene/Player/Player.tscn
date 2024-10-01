@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjkao6qvxkekh"]
+
+[ext_resource type="Script" path="res://Heroes/Player.gd" id="1_hvdki"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i0d35"]
+radius = 3.89
+height = 19.02
+
+[node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
+position = Vector2(450, 450)
+scale = Vector2(2, 2)
+script = ExtResource("1_hvdki")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="MainHero" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+hframes = 25
+vframes = 24
+frame = 50
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(12, 11.5)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_i0d35")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true

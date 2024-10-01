@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://kcd2oou6w4la"]
 
-[ext_resource type="Texture2D" uid="uid://ddo4bw8mseup" path="res://Textures/BackgroundPanel.jpg" id="1_27yhy"]
+[ext_resource type="Texture2D" path="res://Textures/BackgroundPanel.jpg" id="1_27yhy"]
 [ext_resource type="Script" path="res://Godot files/GameSettings.gd" id="1_kmxq8"]
 [ext_resource type="FontFile" uid="uid://drtdid6ufkp3x" path="res://Fonts/Caveat-SemiBold.ttf" id="2_tnwb5"]
 [ext_resource type="Texture2D" uid="uid://bc4bjkdyp56e3" path="res://Heroes/Necromant/Necromancer_creativekind-Sheet.png" id="4_roj3h"]
@@ -148,8 +148,8 @@ icon_alignment = 1
 
 [node name="Necromant" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(1020, 280)
-scale = Vector2(4.83125, 6.78125)
+position = Vector2(1705, 433)
+scale = Vector2(9.93984, 12.3125)
 sprite_frames = SubResource("SpriteFrames_26u5h")
 animation = &"Necromant"
 flip_h = true

@@ -17,7 +17,7 @@ func _ready() -> void:
 func _on_hero_button_pressed(hero_name):
 	selected_hero = hero_name
 	save_hero_selection()
-	get_tree().change_scene_to_file("res://Scene/GameSettings.tscn")
+	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn")
 
 
 func save_hero_selection():
@@ -38,4 +38,4 @@ func _on_random_choice_hero_button_pressed() -> void:
 	var random_heroes = ["Flame", "Shine"]
 	selected_hero = random_heroes[randi() % random_heroes.size()]
 	save_hero_selection()
-	get_tree().change_scene_to_file("res://Scene/GameSettings.tscn")# Replace with function body.
+	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn")# Replace with function body.

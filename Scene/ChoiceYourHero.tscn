@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Godot files/ChoiceYourHero.gd" id="1_arvrf"]
 [ext_resource type="Texture2D" uid="uid://ddo4bw8mseup" path="res://Textures/BackgroundPanel.jpg" id="1_kr44v"]
 [ext_resource type="FontFile" uid="uid://drtdid6ufkp3x" path="res://Fonts/Caveat-SemiBold.ttf" id="2_7cl1j"]
-[ext_resource type="Texture2D" uid="uid://bp2lh3rt5xcre" path="res://Heroes/HeroFireWarrior/Fire_Warrior/Fire_Warrior-Sheet.png" id="4_qgdxx"]
+[ext_resource type="Texture2D" uid="uid://bp2lh3rt5xcre" path="res://Heroes/HeroFireWarrior/Fire_Warrior/FireWarrior.png" id="4_qgdxx"]
 [ext_resource type="Texture2D" uid="uid://45eeo2ehtdfv" path="res://Heroes/HeroLightningWoman/Spearwoman-Sheet.png" id="5_6gvbc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3wpn"]
@@ -265,6 +265,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_arvrf")
+metadata/_edit_lock_ = true
 
 [node name="BackgroundPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -274,6 +275,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_x3wpn")
+metadata/_edit_lock_ = true
 
 [node name="GameTitleLabel" type="Label" parent="."]
 layout_mode = 1
@@ -285,6 +287,7 @@ theme_override_font_sizes/font_size = 45
 text = "VAMPIRE'S VOICE: THE STRUGGLE FOR LIFE"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="MadeByLabel" type="Label" parent="."]
 layout_mode = 1
@@ -303,6 +306,7 @@ theme_override_font_sizes/font_size = 20
 text = "Made ByAlexandrow"
 horizontal_alignment = 1
 vertical_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="BackToMenuButton" type="Button" parent="."]
 layout_mode = 1
@@ -321,6 +325,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_mwwyu")
 text = "<<--"
 flat = true
 icon_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="RandomChoiceHeroButton" type="Button" parent="."]
 layout_mode = 1
@@ -346,20 +351,22 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_68iwq")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_at35s")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ip4jp")
 text = "--RANDOM--"
+metadata/_edit_lock_ = true
 
 [node name="HeroLightningWoman" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(834, 203)
-scale = Vector2(5.71875, 6.49565)
+position = Vector2(1403, 383)
+scale = Vector2(9.60938, 10.8641)
 sprite_frames = SubResource("SpriteFrames_dhuk6")
 animation = &"HeroLightningWoman"
+metadata/_edit_lock_ = true
 
 [node name="ChoiceShine" type="Button" parent="."]
 layout_mode = 0
-offset_left = 866.0
-offset_top = 390.0
-offset_right = 1069.0
-offset_bottom = 452.0
+offset_left = 1445.0
+offset_top = 607.0
+offset_right = 1860.0
+offset_bottom = 772.0
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0.783523, 0.783523, 0.783523, 1)
 theme_override_fonts/font = ExtResource("2_7cl1j")
@@ -369,30 +376,32 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_ed4i8")
 text = "<--Shine"
 flat = true
 icon_alignment = 1
+metadata/_edit_lock_ = true
 
 [node name="HeroFireWarrior" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(441, 319)
-scale = Vector2(5.83333, 6.31875)
+position = Vector2(724, 565)
+scale = Vector2(9.07639, 10.8969)
 sprite_frames = SubResource("SpriteFrames_iavfm")
 animation = &"HeroFireWarrior"
+metadata/_edit_lock_ = true
 
 [node name="ChoiceFlame" type="Button" parent="."]
 layout_mode = 2
-offset_left = 66.0
-offset_top = 285.064
-offset_right = 206.0
-offset_bottom = 347.064
+offset_left = 47.0
+offset_top = 379.0
+offset_right = 407.0
+offset_bottom = 522.0
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_color = Color(0.783523, 0.783524, 0.783523, 1)
 theme_override_fonts/font = ExtResource("2_7cl1j")
 theme_override_font_sizes/font_size = 42
 theme_override_styles/focus = SubResource("StyleBoxEmpty_smgkp")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ay2ln")
-button_mask = 0
 text = "Flame-->"
 flat = true
 icon_alignment = 1
+metadata/_edit_lock_ = true
 
 [connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]
 [connection signal="pressed" from="RandomChoiceHeroButton" to="." method="_on_random_choice_hero_button_pressed"]
