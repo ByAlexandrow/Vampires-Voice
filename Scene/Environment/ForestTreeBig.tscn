@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://b8lrnkvb2gon7"]
+
+[ext_resource type="Texture2D" uid="uid://byky0qg1awaum" path="res://Textures/Trees/MagicForest/Assets/Blue-green_balls_tree1.png" id="1_jujhp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8b43w"]
+radius = 58.0
+height = 154.0
+
+[node name="ForestTreeBig" type="StaticBody2D"]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(467, 384)
+metadata/_edit_group_ = true
+
+[node name="ForestTreeBig" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-11, -15)
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("1_jujhp")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(-5, 78)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_8b43w")
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true

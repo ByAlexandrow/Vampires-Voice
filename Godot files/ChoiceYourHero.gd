@@ -3,6 +3,8 @@ extends Control
 @onready var flame_hero = $HeroFireWarrior
 @onready var shine_hero = $HeroLightningWoman
 
+var selected_hero = ""
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	flame_hero.play("HeroFireWarrior")
@@ -26,4 +28,13 @@ func _on_choice_flame_pressed() -> void:
 
 func _on_choice_shine_pressed() -> void:
 	Global.hero = "Shine"
+	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn") # Replace with function body.
+
+
+func _on_random_choice_hero_button_pressed() -> void:
+	var random_hero = randi_range(0, 1)
+	if random_hero == 0:
+		Global.hero = "Flame"
+	else:
+		Global.hero = "Shine"
 	get_tree().change_scene_to_file("res://Scene/GameWorld.tscn") # Replace with function body.

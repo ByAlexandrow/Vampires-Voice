@@ -1,40 +1,34 @@
-[gd_scene load_steps=8 format=3 uid="uid://cl8xi4lqsjo3r"]
+[gd_scene load_steps=6 format=3 uid="uid://cl8xi4lqsjo3r"]
 
 [ext_resource type="Script" path="res://Godot files/GameWorld.gd" id="1_sonxw"]
-[ext_resource type="Texture2D" uid="uid://bv0ejcsf3pjuy" path="res://Textures/Assets/TX Plant.png" id="2_g5u1p"]
-[ext_resource type="Texture2D" uid="uid://dq0bke75e03yb" path="res://Textures/Forest/Trees.png" id="3_da4tt"]
-[ext_resource type="PackedScene" uid="uid://bjkao6qvxkekh" path="res://Scene/Player/Flame.tscn" id="4_707ds"]
-[ext_resource type="PackedScene" uid="uid://dxw8oboqe4ncc" path="res://Scene/Environment/ForestTree.tscn" id="6_3pp63"]
-[ext_resource type="PackedScene" uid="uid://cnxusb8asa6h1" path="res://Scene/Player/Shine.tscn" id="6_sgvs6"]
-[ext_resource type="Script" path="res://Godot files/Shine.gd" id="7_bimnh"]
+[ext_resource type="Texture2D" uid="uid://dsk5xv4fypr0a" path="res://Textures/Forest/Grass.png" id="2_1wuwf"]
+[ext_resource type="PackedScene" uid="uid://b8lrnkvb2gon7" path="res://Scene/Environment/ForestTreeBig.tscn" id="3_2ospp"]
+[ext_resource type="PackedScene" uid="uid://cq50q2wgqfnsn" path="res://Scene/Environment/ForestTreeMidl.tscn" id="4_0ld4g"]
+[ext_resource type="PackedScene" uid="uid://dsqvy5o14g75r" path="res://Scene/Environment/ForestTreeSmall.tscn" id="5_sejii"]
 
 [node name="GameWorld" type="Node2D"]
 y_sort_enabled = true
 texture_filter = 1
 script = ExtResource("1_sonxw")
 
-[node name="TxPlant" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(139, 225.25)
-scale = Vector2(1.77734, 1.82647)
-texture = ExtResource("2_g5u1p")
-hframes = 4
-vframes = 3
-
-[node name="Trees2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(525, 189)
-scale = Vector2(2.59964, 2.63839)
-texture = ExtResource("3_da4tt")
-hframes = 3
-
-[node name="ForestTree" parent="." instance=ExtResource("6_3pp63")]
-position = Vector2(11, 143)
-
-[node name="ShinePlayer" parent="." instance=ExtResource("6_sgvs6")]
-position = Vector2(602, 407)
-script = ExtResource("7_bimnh")
+[node name="GrassTextureRect" type="TextureRect" parent="."]
+offset_right = 1984.0
+offset_bottom = 1081.0
+texture = ExtResource("2_1wuwf")
+stretch_mode = 1
+metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="FlamePlayer" parent="." instance=ExtResource("4_707ds")]
-position = Vector2(458, 422)
+[node name="Node2D" type="Node2D" parent="."]
+y_sort_enabled = true
+texture_filter = 1
+metadata/_edit_lock_ = true
+
+[node name="ForestTreeBig" parent="Node2D" instance=ExtResource("3_2ospp")]
+position = Vector2(711, 239)
+
+[node name="ForestTreeMidle" parent="Node2D" instance=ExtResource("4_0ld4g")]
+position = Vector2(987, 370)
+
+[node name="ForestTreeSmall" parent="Node2D" instance=ExtResource("5_sejii")]
+position = Vector2(729, 537)
